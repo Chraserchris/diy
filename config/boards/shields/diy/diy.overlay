@@ -1,0 +1,19 @@
+&kscan {
+    compatible = "zmk,kscan-gpio-matrix";
+    row-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>, <&gpio0 3 GPIO_ACTIVE_LOW>, <&gpio0 4 GPIO_ACTIVE_LOW>, <&gpio0 5 GPIO_ACTIVE_LOW>;
+    col-gpios = <&gpio0 28 GPIO_ACTIVE_LOW>, <&gpio0 29 GPIO_ACTIVE_LOW>, <&gpio0 30 GPIO_ACTIVE_LOW>, <&gpio0 31 GPIO_ACTIVE_LOW>;
+    diode-direction = "COL2ROW";
+};
+
+&keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+        bindings = <
+            &kp Q &kp W &kp E &kp R
+            &kp A &kp S &kp D &kp F
+            &kp Z &kp X &kp C &kp V
+            &kp 1 &kp 2 &kp 3 &kp 4
+        >;
+    };
+};
